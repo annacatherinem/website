@@ -110,6 +110,10 @@ body.de_light {
 	overflow: visible;
 }
 
+.user-feature{
+	height: 366px;
+	margin-top: 0px	;	
+}
 /* ================================================== */
 
 
@@ -2057,7 +2061,7 @@ h1.big.s1{
 	font-weight:bold;
 }
 h1.very-big {
-	font-size: 120px;
+	font-size: 80px;
 	letter-spacing:-5px;
 }
 h1.ultra-big {
@@ -7643,6 +7647,8 @@ a, img {
 		height: auto;
 	}
 }
+
+
 
 /* -------------------------------------------------- 
 	design for 320px
