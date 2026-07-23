@@ -1,589 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from www.designesia.com/themes/profession/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Jul 2021 11:02:26 GMT -->
 <head>
-    <meta charset="utf-8">
-    <title>Anna Catherine Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profession is Personal Portfolio Template">
-    <meta name="keywords" content="business, clean, contact form, corporate, cv, light, minimalist, modern, personal, personal profile, portfolio, resume, vcard, virtual card">
-    <meta name="author" content="">
-    <style>h3 {text-align: center;}</style>
-    <!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Anna Catherine M — Certified Financial Planner</title>
+<meta name="author" content="Anna Catherine M">
+<meta name="description" content="Anna Catherine M, CFP — Certified Financial Planner in Kochi. Comprehensive financial planning across investments, insurance, retirement, tax and cash flow.">
+<meta property="og:title" content="Anna Catherine M — Certified Financial Planner">
+<meta property="og:description" content="Certified Financial Planner in Kochi. Comprehensive planning across investments, insurance, retirement, tax and cash flow.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://annacatherinem.github.io/website/">
 
-    <!-- CSS Files
-    ================================================== -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    
-    <!-- background -->
-    <link rel="stylesheet" href="css/bg.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- color scheme -->
-    <link rel="stylesheet" href="css/colors/scheme-6.css" type="text/css">
+<style>
+:root{
+  color-scheme:light only;
+  --paper:#ECEDE5;
+  --paper-2:#E3E5DA;
+  --ink:#15211B;
+  --ink-soft:#4C584F;
+  --rule:#C2C9BA;
+  --accent:#1F5A45;
+  --measure:34rem;
+  --gutter:clamp(1.25rem,5vw,4.5rem);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Public Sans",system-ui,sans-serif;
+  font-size:clamp(1rem,0.96rem + 0.2vw,1.0625rem);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;margin:0}
+p{margin:0 0 1rem}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:78rem;margin:0 auto;padding-inline:var(--gutter)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.5rem}
+.topbar__name{font-family:Fraunces,serif;font-size:1.05rem;text-decoration:none}
+.topbar nav{display:flex;gap:1.5rem}
+.topbar nav a{text-decoration:none}
+.topbar nav a:hover{color:var(--accent)}
+@media (max-width:44rem){.topbar nav{display:none}}
+
+.horizon{display:flex;align-items:baseline;gap:1rem;margin:0 0 2.5rem}
+.horizon__label{white-space:nowrap}
+.horizon__line{flex:1;height:11px;border-bottom:1px solid var(--ink);background-image:repeating-linear-gradient(to right,var(--rule) 0 1px,transparent 1px 14px);background-position:bottom;transform-origin:left center}
+.reveal .horizon__line{animation:draw .9s cubic-bezier(.2,.7,.3,1) both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.hero{padding:clamp(4rem,13vh,8rem) 0 clamp(3rem,8vh,5rem)}
+.hero__credential{display:block;margin-bottom:1.75rem}
+.hero h1{font-size:clamp(2.9rem,10vw,6.5rem);letter-spacing:-0.025em;font-optical-sizing:auto}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--accent)}
+.hero__lede{max-width:var(--measure);font-size:clamp(1.1rem,1rem + 0.5vw,1.35rem);line-height:1.5;margin-top:2rem;color:var(--ink-soft)}
+.hero__horizon{margin-top:3.5rem;margin-bottom:1rem}
+.hero__years{display:flex;justify-content:space-between}
+
+.actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:2.5rem}
+.btn{display:inline-block;padding:0.8rem 1.5rem;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--ink);transition:background .18s,color .18s}
+.btn--solid{background:var(--ink);color:var(--paper)}
+.btn--solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn--ghost:hover{background:var(--paper-2)}
+
+.section{padding:clamp(3.5rem,9vh,6rem) 0;border-top:1px solid var(--rule)}
+.cols{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+@media (max-width:52rem){.cols{grid-template-columns:1fr;gap:2rem}}
+.section h2{font-size:clamp(1.9rem,4.5vw,2.9rem);letter-spacing:-0.015em;margin-bottom:1.25rem}
+.prose{max-width:var(--measure)}
+.prose p{color:var(--ink-soft)}
+.prose strong{color:var(--ink);font-weight:600}
+.portrait{width:100%;max-width:22rem;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(0.92) contrast(1.02);border:1px solid var(--rule)}
+
+.practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.practice > div{background:var(--paper);padding:1.75rem 1.5rem}
+.practice h3{font-size:1.25rem;margin-bottom:0.6rem}
+.practice p{font-size:0.94rem;color:var(--ink-soft);margin:0}
+
+.ledger{border-top:1px solid var(--rule)}
+.entry{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--rule)}
+@media (max-width:40rem){.entry{grid-template-columns:1fr;gap:0.35rem}}
+.entry__year{padding-top:0.3rem}
+.entry h3{font-size:1.2rem;margin-bottom:0.3rem}
+.entry__meta{font-size:0.94rem;color:var(--ink-soft);margin:0}
+.entry ul{margin:0.7rem 0 0;padding-left:1.1rem;color:var(--ink-soft);font-size:0.94rem}
+.entry li{margin-bottom:0.35rem}
+.entry__id{font-family:"JetBrains Mono",monospace;font-size:0.75rem;color:var(--ink-soft);margin-top:0.4rem;display:block}
+
+.contact-email{font-family:Fraunces,serif;font-size:clamp(1.4rem,4.5vw,2.4rem);text-decoration:none;border-bottom:1px solid var(--rule);display:inline-block;word-break:break-all}
+.contact-email:hover{color:var(--accent);border-color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
+.links a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.links a:hover{color:var(--accent)}
+footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
+
+.section,.hero__lede,.actions{transition:opacity .6s ease,transform .6s ease}
+.js .anim{opacity:0;transform:translateY(14px)}
+.js .anim.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .anim{opacity:1;transform:none}.reveal .horizon__line{animation:none}}
+</style>
 </head>
-
-<body id="homepage">
-
-    <div id="wrapper">
-
-        <!-- header begin -->
-        <header>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- logo begin -->
-                       <!-- <div id="logo">
-                            <a href="#wrapper">
-                                <img class="logo" src="images/logo-light-bw.png" alt="">
-                                <img class="logo-2" src="images/logo-dark-bw.png" alt="">
-                            </a>
-                        </div> -->
-                        <!-- logo close -->
-
-                        <!-- small button begin -->
-                        <span id="menu-btn"></span>
-                        <!-- small button close -->
-
-                        <!-- mainmenu begin -->
-                        <nav>
-                            <ul id="mainmenu">
-                                <li><a class="active" href="#top">Home<span></span></a></li>
-                                <li><a href="#section-about">About<span></span></a></li>
-                                <li><a href="#section-services">Services<span></span></a></li>
-                                <li><a href="#section-portfolio">Achievements<span></span></a></li>
-                                <li><a href="#section-experiences">Experiences<span></span></a></li>
-                                <li><a href="#section-contact">Contact Me<span></span></a></li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                    <!-- mainmenu close -->
-
-                </div>
-            </div>
-        </header>
-        <!-- header close -->
-
-        <!-- content begin -->
-        <div id="content" class="no-bottom no-top">
-            <div id="top"></div>
-
-            <!-- section begin -->
-            <section id="section-hero-3" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
-                <div class="overlay-bg">
-                    <div class="center-y fadeScroll relative text-center" data-scroll-speed="4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="spacer-double"></div>
-                                    <h1 class="very-big">I'm Anna Catherine M</h1>
-                                    <div class="h2_s1 text-white mt10">
-                                        <div class="typed-strings">
-                                            <p>Certified Financial Planner <sup>CM</sup></p>
-                                            
-                                        </div>
-                                        <div class="typed"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-
-            <!-- section begin -->
-            <section id="section-about">
-                <div class="container relative">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="pr20">
-                                <img src="images/portfolio-bw/748.png" class="img-auto img-rounded img-responsive" alt="">
-                            </div>
-                        </div>
-
-                        <div class="col-md-7">
-                            <div class="spacer-half"></div>
-                            <h2><span class="id-color">About Me</span></h2>
-                            
-
-                            <p>I am a driven Certified Financial Planner with a passion in financial planning and looking forward for providing clients with optimal assistance in Insurance and risk analysis, Retirement planning, Estate planning, Investment advice, Tax strategies and an overall support for managing their finances.</p>
-                            <a href="images/Resume.pdf" class="btn btn-custom color-2"  download="">My Resume
-                                <i class="fa fa-download"></i>
-                            </a>
-                            
-                        </div>
-
-                        
-
-                        <div class="spacer-double"></div>
-                        
-                            <h3 style="color: rgb(8, 8, 7) ;" >MY SKILLS</h3>
-                        
-                        
-
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Financial Planning</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="90%">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>MS Office Suite</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="89%">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Mutual Fund research</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="85%">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>Investment Analysis & Portfolio Management</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="80%">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="skill-bar style-2">
-                                <h5>Retirement & Tax Planning</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="75%">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar style-2">
-                                <h5>Branding & Marketing</h5>
-                                <div class="de-progress">
-                                    <div class="value"></div>
-                                    <div class="progress-bar" data-value="70%">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-services" class="no-top no-bottom text-light index-4" data-stellar-background-ratio=".2">
-                <div class="overlay-solid">
-                    <div class="overlay-bg t70">
-                        <div class="container">
-
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h5><span class="id-color">My Services</span></h5>
-                                    <h2>I'm Available For Hire</h2>
-
-
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon_calculator_alt id-color"></i>
-                                            <div class="text">
-                                                <h3>Financial Planning</h3>
-                                                Set up comprehensive financial plans based on clients goals.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon-documents id-color"></i>
-                                            <div class="text">
-                                                <h3>MS Office Suite</h3>
-                                                Skilled in word processing, spread sheet, presentation & database software.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon_search id-color"></i>
-                                            <div class="text">
-                                                <h3>Mutual Fund research</h3>
-                                                Analyze & pick the right funds based on goals and risk appetite of individuals.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                    <div class="spacer-half"></div>
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon_tag_alt id-color"></i>
-                                            <div class="text">
-                                                <h3>Investment Analysis & Portfolio Management</h3>
-                                                Combine solid theory with practical application to manage money to derive maximum benefit.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon_pencil-edit id-color"></i>
-                                            <div class="text">
-                                                <h3>Retirement & Tax Planning</h3>
-                                                Financial strategies that will enable confortable and secure retirement years.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                    <!-- feature box begin -->
-                                    <div class="feature-box col-md-4">
-                                        <div class="inner user-feature">
-                                            <i class="icon_datareport id-color"></i>
-                                            <div class="text">
-                                                <h3>Branding & Marketing</h3>
-                                                Strong verbal and written communication skill to negotiate relationship agreements with win-win scenario..
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- feature box close -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-portfolio">
-                <div class="container">
-
-                    <!-- portfolio filter begin -->
-                    <div class="row">
-
-                        <div class="col-md-12 text-center">
-                            <h5><span class="id-color">Achievements</span></h5>
-                            <h2>Certificate</h2>
-                        </div>
-
-                        <div class="col-md-12 text-center mt50">
-                            <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_3_cols grid sequence">
-                                
-                                <!-- gallery item -->
-                                <div class="item illustration website sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/yyyy.JPG">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Certificate</span>
-												</span>
-											</span>
-											<img src="images/portfolio-bw/yyyy.JPG" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/14.png">
-						<span class="overlay">
-							<span class="pf_text">
-								<span class="project-name">Certificate</span>
-							</span>
-							</span>
-							<img src="images/portfolio-bw/14.png" alt="" />
-						</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item illustration sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/13.png">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Certificate</span>
-												</span>
-											</span>
-											<img src="images/portfolio-bw/13.png" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography illustration mobile sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/15.png">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Certificate</span>
-												</span>
-											</span>
-											<img src="images/portfolio-bw/15.png" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item photography mobile website sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/16.png">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Certificate</span>
-												</span>
-											</span>
-											<img src="images/portfolio-bw/16.png" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                                <!-- gallery item -->
-                                <div class="item mobile website sq-item">
-                                    <div class="picframe wow">
-                                        <a class="image-popup" href="images/portfolio-bw/17.png">
-											<span class="overlay">
-												<span class="pf_text">
-													<span class="project-name">Certificate</span>
-												</span>
-											</span>
-											<img src="images/portfolio-bw/17.png" alt="" />
-										</a>
-                                    </div>
-                                </div>
-                                <!-- close gallery item -->
-
-                            </div>
-                        </div>
-                        <!-- portfolio filter close -->
-
-                    </div>
-
-                </div>
-
-
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-experiences" class="no-top no-bottom text-light index-4" data-stellar-background-ratio=".2">
-                <div class="overlay-solid">
-                    <div class="overlay-bg t70">
-                        <div class="container">
-
-                            <div class="row">                               
-                                <div class="col-md-6">
-                                    <div class="padding20 wow fadeInRight" data-wow-delay=".25s">
-                                        <h2>Education</h2>
-                                        <div class="exp-box">
-                                            <h5>2021</h5>
-                                            <h3>Certified Financial Planner <sup> CM</sup></h3>
-                                        </div>
-                                        <div class="exp-box">
-                                            <h5>2020</h5>
-                                            <h3>Bachelor of Commerce</h3>
-                                            <p><i>Specialised in Banking and Insurance</i> <br> Sahrdaya College of Advanced Studies, Calicut University</p>   
-                                        </div>
-                                        <div class="exp-box">
-                                            <h5>2017</h5>
-                                            <h3>Commerce Group, Kerala State</h3>
-                                            <p>Kanikkamatha English Medium Girls Higher Secondary School</p>
-                                        </div>
-                                        <div class="exp-box">
-                                            <h5>2015</h5>
-                                            <h3>10th grade, CBSE</h3>
-                                            <p>St.Ann's Senior Secondary School</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6">
-                                    <div class="padding20 wow row fadeInRight">
-                                        <h2>Experiences</h2>
-                                        <div class="exp-box">
-                                            <h5>2021 - now</h5>
-                                            <h3>Financial Planner</h3>
-                                            <p>Armstrong Capital and Financial Services Pvt. Ltd. </p>
-                                        </div>                        
-                                    </div>
-                                    <div class="padding20 wow row fadeInRight">
-                                        <h2>Projects</h2>
-                                        <div class="exp-box">
-                                            <h5>2019</h5>
-                                            <h3>The Perception of customers investing in Life Insurance</h3>
-                                        </div>                        
-                                    </div>
-                                </div>                           
-                            </div>
-                         </div>  
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-
-            
-            <!-- section begin -->
-            <section id="section-contact" class="no-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h5><span class="id-color">Have Question?</span></h5>
-                            <h2>Contact Me Now</h2>
-                        </div>
-
-                        <div class="col-md-8 col-md-offset-2 wow fadeInUp">
-                            <div class="row">
-                                <form name="contactForm" id='contact_form' class="s2" method="post" action='https://formspree.io/f/xgerdkny'>
-                                    <div class="col-md-6">
-                                        <div class="field-set">
-                                            <input type='text' name='name' id='name' class="form-control" placeholder="Your Name" required>
-                                            <div class="line-fx"></div>
-                                        </div>
-
-                                        <div class="field-set">
-                                            <input type='email' name='email' id='email' class="form-control" placeholder="Your Email" required>
-                                            <div class="line-fx"></div>
-                                        </div>
-
-                                        <div class="field-set">
-                                            <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone" required>
-                                            <div class="line-fx"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="field-set">
-                                            <textarea name='message' id='message' class="form-control" placeholder="Your Message" required></textarea>
-                                            <div class="line-fx"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="spacer-single"></div>
-
-                                    <div class="col-md-12 text-center">
-                                        <div id='submit'>
-                                            <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom color-2">
-                                        </div>
-                                        <!-- <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                        <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div> -->
-                                        <p id="my-form-status"></p>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="spacer-double"></div>
-
-                            <div class="row text-center wow fadeInUp">
-                                <div class="col-md-12">
-
-                                    <div class="wm-1"></div>
-                                    <i class="icon_mail_alt id-color size40 mb20"></i>
-                                    <h6 class="id-color">Email Us</h6>
-                                    <h4>mannacatherinem@gmail.com</h4>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-
+<body>
+<script>document.body.classList.add('js')</script>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="topbar__name" href="#top">Anna Catherine M</a>
+    <nav class="mono">
+      <a href="#about">About</a>
+      <a href="#practice">Practice</a>
+      <a href="#writing">Writing</a>
+      <a href="#record">Record</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <span class="mono hero__credential">CFP<sup>&reg;</sup> &nbsp;·&nbsp; Kochi, Kerala</span>
+    <h1>Money decisions<br>that hold up<br><em>over decades.</em></h1>
+    <p class="hero__lede">I'm a CERTIFIED FINANCIAL PLANNER working in comprehensive planning — investments, insurance, retirement, tax and cash flow, held together in one document a family can actually follow.</p>
+
+    <div class="hero__horizon horizon reveal">
+      <span class="mono horizon__label">Planning horizon</span>
+      <span class="horizon__line"></span>
+    </div>
+    <div class="hero__years mono"><span>Today</span><span>10 yrs</span><span>25 yrs</span><span>Retirement</span></div>
+
+    <div class="actions">
+      <a class="btn btn--solid" href="#contact">Get in touch</a>
+      <a class="btn btn--ghost" href="https://annacatherinem.github.io/website/Anna-Catherine-M-CV.pdf">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <section class="section wrap anim" id="about">
+    <div class="horizon"><span class="mono horizon__label">About</span><span class="horizon__line"></span></div>
+    <div class="cols">
+      <img class="portrait" src="https://annacatherinem.github.io/website/anna-catherine.jpg" alt="Anna Catherine M" width="800" height="1000">
+      <div class="prose">
+        <h2>Plans, not products.</h2>
+        <p>Five years into financial planning, across three firms and two cities, one thing has stayed constant: most people arrive holding a few policies, a handful of funds, and no clear view of whether any of it adds up to the life they're working toward.</p>
+        <p>My job is to give them that view — <strong>what you own, what it costs, what it's for, and what happens next</strong> — and then a written plan that gets revisited as things change.</p>
+        <p>I handle end-to-end onboarding, risk profiling, goal mapping and portfolio construction, and I run periodic reviews and rebalancing against those goals. The approach is client-first and transparent, weighted toward long-term outcomes rather than product sales.</p>
+        <p>Alongside the CFP certification I hold an MBA in Financial Management from NMIMS, the QPFP designation from Network FP, and NISM Investment Adviser certifications at Levels 1 and 2.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap anim" id="practice">
+    <div class="horizon"><span class="mono horizon__label">Practice</span><span class="horizon__line"></span></div>
+    <h2 style="margin-bottom:2rem">The work, in six parts.</h2>
+    <div class="practice">
+      <div>
+        <h3>Comprehensive planning</h3>
+        <p>One written plan covering income, spending, goals and the gap between them, with the trade-offs made explicit rather than buried.</p>
+      </div>
+      <div>
+        <h3>Goal-based investing</h3>
+        <p>Every rupee assigned a job and a date. Goals set the time horizon; the time horizon sets the risk.</p>
+      </div>
+      <div>
+        <h3>Asset allocation &amp; fund selection</h3>
+        <p>Funds chosen against a client's goals and their tolerance for a bad year — not against last year's returns.</p>
+      </div>
+      <div>
+        <h3>Portfolio review &amp; rebalancing</h3>
+        <p>Periodic reviews that check the portfolio still matches the plan, and correct the drift when it doesn't.</p>
+      </div>
+      <div>
+        <h3>Retirement planning</h3>
+        <p>A number to aim for, a path to it, and a withdrawal strategy for when the salary stops.</p>
+      </div>
+      <div>
+        <h3>Insurance &amp; risk management</h3>
+        <p>What's actually covered, what's paid for twice, and what would happen to a family in the worst case.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap anim" id="writing">
+    <div class="horizon"><span class="mono horizon__label">Writing</span><span class="horizon__line"></span></div>
+    <div class="cols">
+      <div><h2>Notes on planning.</h2></div>
+      <div class="prose">
+        <p>I publish a carousel most weeks breaking down one piece of personal finance &mdash; the kind of thing that gets explained badly, or not at all, to the people it affects most.</p>
+        <p>It's the clearest picture of how I think about money, and the fastest way to tell whether we'd work well together.</p>
+        <div class="links" style="margin-top:1.5rem">
+          <a href="https://www.linkedin.com/in/anna-catherine-m-2305/recent-activity/all/">Read the latest on LinkedIn &rarr;</a>
         </div>
-        <!-- content close -->
+      </div>
+    </div>
+  </section>
 
-        <!-- footer begin -->
-        <footer>
-            <div class="container text-center text-light">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="social-icons big">
-                            <a href="https://www.facebook.com/anna.catherinekate"><i class="fa fa-facebook fa-lg"></i></a>
-                            <a href="https://twitter.com/m_annacatherine?s=09"><i class="fa fa-twitter fa-lg"></i></a>
-                            <a href="https://www.linkedin.com/in/anna-catherine-m-2305"><i class="fa fa-linkedin fa-lg"></i></a>
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer close -->
+  <section class="section wrap anim" id="record">
+    <div class="horizon"><span class="mono horizon__label">Record</span><span class="horizon__line"></span></div>
 
-        <a href="#" id="back-to-top"></a>
-        <div id="preloader">
-            <div class="s1">
-                <span></span>
-                <span></span>
-            </div>
+    <h2 style="margin-bottom:2rem">Experience</h2>
+    <div class="ledger">
+      <div class="entry">
+        <span class="mono entry__year">2022 — Now</span>
+        <div>
+          <h3>Certified Financial Planner</h3>
+          <p class="entry__meta">Steps by Geojit · Kochi</p>
+          <ul>
+            <li>Deliver comprehensive financial plans spanning investments, insurance, retirement, tax efficiency and cash flow</li>
+            <li>Own client onboarding end to end — risk profiling, goal mapping and portfolio construction</li>
+            <li>Conduct periodic portfolio reviews and rebalancing against client objectives</li>
+            <li>Independently manage transferred client relationships and advisory portfolios</li>
+          </ul>
         </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2022</span>
+        <div>
+          <h3>Research Analyst</h3>
+          <p class="entry__meta">FinoFy Technologies Limited · Mumbai</p>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2021 — 2022</span>
+        <div>
+          <h3>Financial Planner</h3>
+          <p class="entry__meta">Armstrong Capital &amp; Financial Services Pvt. Ltd. · Bengaluru</p>
+          <ul><li>Joined as an intern in April 2021 and moved into a full-time planning role that August</li></ul>
+        </div>
+      </div>
     </div>
 
+    <h2 style="margin:3.5rem 0 2rem">Certifications</h2>
+    <div class="ledger">
+      <div class="entry">
+        <span class="mono entry__year">2023</span>
+        <div>
+          <h3>CERTIFIED FINANCIAL PLANNER<sup>&reg;</sup></h3>
+          <p class="entry__meta">FPSB India — Global Excellence in Financial Planning</p>
+          <span class="entry__id">Credential ID 80239461</span>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2025</span>
+        <div>
+          <h3>NISM Series XXI-A — PMS Distributors</h3>
+          <p class="entry__meta">National Institute of Securities Markets</p>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2025</span>
+        <div>
+          <h3>NISM Series X-B — Investment Adviser (Level 2)</h3>
+          <p class="entry__meta">National Institute of Securities Markets · Valid to Aug 2028</p>
+          <span class="entry__id">Credential ID NISM-202100043249</span>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2025</span>
+        <div>
+          <h3>NISM Series X-A — Investment Adviser (Level 1)</h3>
+          <p class="entry__meta">National Institute of Securities Markets · Valid to Jul 2028</p>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2022</span>
+        <div>
+          <h3>Qualified Personal Financial Professional<sup>&reg;</sup></h3>
+          <p class="entry__meta">Network FP</p>
+        </div>
+      </div>
+    </div>
 
+    <h2 style="margin:3.5rem 0 2rem">Education</h2>
+    <div class="ledger">
+      <div class="entry">
+        <span class="mono entry__year">2022 — 2024</span>
+        <div>
+          <h3>MBA, Finance &amp; Financial Management</h3>
+          <p class="entry__meta">SVKM's Narsee Monjee Institute of Management Studies (NMIMS)</p>
+          <span class="entry__id">Credential ID 87135</span>
+        </div>
+      </div>
+      <div class="entry">
+        <span class="mono entry__year">2017 — 2020</span>
+        <div>
+          <h3>B.Com, Banking &amp; Insurance</h3>
+          <p class="entry__meta">Sahrudaya College of Advanced Studies, Kodakara</p>
+          <ul><li>Research project: customer perception in life insurance purchasing</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/enquire.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/typed-custom.js"></script>
-    <script src="js/designesia.js"></script>
+  <section class="section wrap anim" id="contact">
+    <div class="horizon"><span class="mono horizon__label">Contact</span><span class="horizon__line"></span></div>
+    <div class="cols">
+      <div><h2>Let's talk.</h2></div>
+      <div class="prose">
+        <p>Open to conversations about financial planning, wealth advisory and fee-only or RIA opportunities.</p>
+        <a class="contact-email" href="mailto:mannacatherinem@gmail.com">mannacatherinem@gmail.com</a>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/anna-catherine-m-2305">LinkedIn</a>
+          <a href="https://x.com/m_annacatherine">X</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+</main>
+
+<footer class="wrap mono">
+  <span>Anna Catherine M · CFP<sup>&reg;</sup> · Updated July 2026</span>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.anim');
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('reveal')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('reveal');io.unobserve(e.target);}})},{threshold:0.12});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>
