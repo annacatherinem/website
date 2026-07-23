@@ -6,11 +6,19 @@
 <meta name="color-scheme" content="light only">
 <title>Anna Catherine M — Certified Financial Planner</title>
 <meta name="author" content="Anna Catherine M">
-<meta name="description" content="Anna Catherine M, CFP — Certified Financial Planner in Kochi. Comprehensive financial planning across investments, insurance, retirement, tax and cash flow.">
+<meta name="description" content="Anna Catherine M, CFP — Certified Financial Planner. Comprehensive financial planning across investments, insurance, retirement, tax and cash flow.">
 <meta property="og:title" content="Anna Catherine M — Certified Financial Planner">
-<meta property="og:description" content="Certified Financial Planner in Kochi. Comprehensive planning across investments, insurance, retirement, tax and cash flow.">
+<meta property="og:description" content="Certified Financial Planner. Comprehensive planning across investments, insurance, retirement, tax and cash flow.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://annacatherinem.github.io/website/">
+<meta property="og:image" content="https://annacatherinem.github.io/website/preview-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Anna Catherine M">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anna Catherine M — Certified Financial Planner">
+<meta name="twitter:description" content="Comprehensive financial planning across investments, insurance, retirement, tax and cash flow.">
+<meta name="twitter:image" content="https://annacatherinem.github.io/website/preview-card.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +27,12 @@
 <style>
 :root{
   color-scheme:light only;
-  --paper:#ECEDE5;
-  --paper-2:#E3E5DA;
-  --ink:#15211B;
-  --ink-soft:#4C584F;
-  --rule:#C2C9BA;
-  --accent:#1F5A45;
+  --paper:#FBFAFD;
+  --paper-2:#F2F0F8;
+  --ink:#1E2430;
+  --ink-soft:#4A5461;
+  --rule:rgba(30,36,48,0.14);
+  --accent:#574A8F;
   --measure:34rem;
   --gutter:clamp(1.25rem,5vw,4.5rem);
 }
@@ -44,64 +52,73 @@ a{color:inherit}
 .wrap{max-width:78rem;margin:0 auto;padding-inline:var(--gutter)}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft)}
 
-.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,253,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.5rem}
-.topbar__name{font-family:Fraunces,serif;font-size:1.05rem;text-decoration:none}
+.topbar__name{font-family:Fraunces,serif;font-size:1.18rem;letter-spacing:-0.01em;text-decoration:none}
 .topbar nav{display:flex;gap:1.5rem}
 .topbar nav a{text-decoration:none}
 .topbar nav a:hover{color:var(--accent)}
 @media (max-width:44rem){.topbar nav{display:none}}
 
 .horizon{display:flex;align-items:baseline;gap:1rem;margin:0 0 2.5rem}
-.horizon__label{white-space:nowrap}
-.horizon__line{flex:1;height:11px;border-bottom:1px solid var(--ink);background-image:repeating-linear-gradient(to right,var(--rule) 0 1px,transparent 1px 14px);background-position:bottom;transform-origin:left center}
+.horizon__label{white-space:nowrap;color:var(--accent)}
+.horizon__line{flex:1;height:11px;border-bottom:1px solid var(--accent);background-image:repeating-linear-gradient(to right,var(--rule) 0 1px,transparent 1px 14px);background-position:bottom;transform-origin:left center}
 .reveal .horizon__line{animation:draw .9s cubic-bezier(.2,.7,.3,1) both}
 @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
 .hero{padding:clamp(4rem,13vh,8rem) 0 clamp(3rem,8vh,5rem)}
 .hero__credential{display:block;margin-bottom:1.75rem}
-.hero h1{font-size:clamp(2.9rem,10vw,6.5rem);letter-spacing:-0.025em;font-optical-sizing:auto}
-.hero h1 em{font-style:italic;font-weight:300;color:var(--accent)}
+.hero h1{color:var(--ink);font-size:clamp(3.1rem,11vw,7rem);letter-spacing:-0.03em;font-optical-sizing:auto}
+.hero__tagline{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:clamp(1.45rem,4.4vw,2.5rem);line-height:1.15;letter-spacing:-0.01em;margin:1.6rem 0 0;max-width:22ch;color:var(--ink)}
+.hero__tagline em{font-style:italic;color:var(--accent)}
 .hero__lede{max-width:var(--measure);font-size:clamp(1.1rem,1rem + 0.5vw,1.35rem);line-height:1.5;margin-top:2rem;color:var(--ink-soft)}
 .hero__horizon{margin-top:3.5rem;margin-bottom:1rem}
 .hero__years{display:flex;justify-content:space-between}
 
 .actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:2.5rem}
-.btn{display:inline-block;padding:0.8rem 1.5rem;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--ink);transition:background .18s,color .18s}
-.btn--solid{background:var(--ink);color:var(--paper)}
+.btn{display:inline-block;padding:0.8rem 1.5rem;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--ink);border-radius:2px;transition:background .18s,color .18s,border-color .18s}
+.btn--solid{background:var(--ink);color:#fff;border-color:var(--ink)}
 .btn--solid:hover{background:var(--accent);border-color:var(--accent)}
-.btn--ghost:hover{background:var(--paper-2)}
+.btn--ghost:hover{background:#fff;border-color:var(--accent);color:var(--accent)}
 
-.section{padding:clamp(3.5rem,9vh,6rem) 0;border-top:1px solid var(--rule)}
+.band{background:var(--bg,var(--paper))}
+.band--lilac {--bg:#F1EEFB; --accent:#574A8F}
+.band--aqua  {--bg:#E7F3F5; --accent:#24646C}
+.band--peach {--bg:#FDF0EA; --accent:#96502F}
+.band--mint  {--bg:#ECF5E9; --accent:#3B6440}
+.band--butter{--bg:#FBF3E4; --accent:#7D6425}
+.band--sky   {--bg:#E9F0FA; --accent:#2F4F85}
+.section{padding:clamp(3.5rem,9vh,6rem) 0}
 .cols{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 @media (max-width:52rem){.cols{grid-template-columns:1fr;gap:2rem}}
 .section h2{font-size:clamp(1.9rem,4.5vw,2.9rem);letter-spacing:-0.015em;margin-bottom:1.25rem}
 .prose{max-width:var(--measure)}
 .prose p{color:var(--ink-soft)}
 .prose strong{color:var(--ink);font-weight:600}
-.portrait{width:100%;max-width:22rem;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(0.92) contrast(1.02);border:1px solid var(--rule)}
+.portrait{width:100%;max-width:22rem;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(0.92) contrast(1.02);border:2px solid #fff;box-shadow:0 1px 0 var(--rule)}
 
-.practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.practice > div{background:var(--paper);padding:1.75rem 1.5rem}
-.practice h3{font-size:1.25rem;margin-bottom:0.6rem}
+.practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.practice > div{background:#FFFFFF;padding:1.75rem 1.5rem}
+.practice h3{font-size:1.25rem;margin-bottom:0.6rem;color:var(--accent)}
 .practice p{font-size:0.94rem;color:var(--ink-soft);margin:0}
 
 .ledger{border-top:1px solid var(--rule)}
 .entry{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--rule)}
 @media (max-width:40rem){.entry{grid-template-columns:1fr;gap:0.35rem}}
 .entry__year{padding-top:0.3rem}
-.entry h3{font-size:1.2rem;margin-bottom:0.3rem}
+.entry h3{font-size:1.2rem;margin-bottom:0.3rem;color:var(--accent)}
 .entry__meta{font-size:0.94rem;color:var(--ink-soft);margin:0}
 .entry ul{margin:0.7rem 0 0;padding-left:1.1rem;color:var(--ink-soft);font-size:0.94rem}
 .entry li{margin-bottom:0.35rem}
 .entry__id{font-family:"JetBrains Mono",monospace;font-size:0.75rem;color:var(--ink-soft);margin-top:0.4rem;display:block}
 
-.contact-email{font-family:Fraunces,serif;font-size:clamp(1.4rem,4.5vw,2.4rem);text-decoration:none;border-bottom:1px solid var(--rule);display:inline-block;word-break:break-all}
+.contact-email{font-family:Fraunces,serif;color:var(--accent);font-size:clamp(1.4rem,4.5vw,2.4rem);text-decoration:none;border-bottom:1px solid var(--rule);display:inline-block;word-break:break-all}
 .contact-email:hover{color:var(--accent);border-color:var(--accent)}
 .links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
 .links a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
 .links a:hover{color:var(--accent)}
-footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
+footer{padding:2rem 0 3rem;background:var(--paper-2)}
+.disclaimer{max-width:60ch;font-size:0.78rem;line-height:1.55;color:var(--ink-soft);margin:0}
 
 .section,.hero__lede,.actions{transition:opacity .6s ease,transform .6s ease}
 .js .anim{opacity:0;transform:translateY(14px)}
@@ -127,9 +144,10 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
 
 <main id="top">
 
-  <section class="hero wrap">
-    <span class="mono hero__credential">CFP<sup>&reg;</sup> &nbsp;·&nbsp; Kochi, Kerala</span>
-    <h1>Money decisions<br>that hold up<br><em>over decades.</em></h1>
+  <div class="band band--lilac"><section class="hero wrap">
+    <span class="mono hero__credential">Certified Financial Planner<sup>&reg;</sup></span>
+    <h1>Anna<br>Catherine&nbsp;M</h1>
+    <p class="hero__tagline">Money decisions that hold up <em>over decades.</em></p>
     <p class="hero__lede">I'm a CERTIFIED FINANCIAL PLANNER working in comprehensive planning — investments, insurance, retirement, tax and cash flow, held together in one document a family can actually follow.</p>
 
     <div class="hero__horizon horizon reveal">
@@ -142,25 +160,26 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
       <a class="btn btn--solid" href="#contact">Get in touch</a>
       <a class="btn btn--ghost" href="https://annacatherinem.github.io/website/Anna-Catherine-M-CV.pdf">Download CV (PDF)</a>
     </div>
-  </section>
+  </section></div>
 
-  <section class="section wrap anim" id="about">
+  <div class="band band--aqua"><section class="section wrap anim" id="about">
     <div class="horizon"><span class="mono horizon__label">About</span><span class="horizon__line"></span></div>
     <div class="cols">
       <img class="portrait" src="https://annacatherinem.github.io/website/anna-catherine.jpg" alt="Anna Catherine M" width="800" height="1000">
       <div class="prose">
         <h2>Plans, not products.</h2>
-        <p>Five years into financial planning, across three firms and two cities, one thing has stayed constant: most people arrive holding a few policies, a handful of funds, and no clear view of whether any of it adds up to the life they're working toward.</p>
-        <p>My job is to give them that view — <strong>what you own, what it costs, what it's for, and what happens next</strong> — and then a written plan that gets revisited as things change.</p>
-        <p>I handle end-to-end onboarding, risk profiling, goal mapping and portfolio construction, and I run periodic reviews and rebalancing against those goals. The approach is client-first and transparent, weighted toward long-term outcomes rather than product sales.</p>
+        <p>I'm a CERTIFIED FINANCIAL PLANNER with five years in goal-based financial planning &mdash; retirement, tax efficiency, contingency planning and risk management.</p>
+        <p>Most people come to me holding a few policies, a handful of funds and no clear view of whether any of it adds up to the life they're working toward. My job is to give them that view &mdash; <strong>what you own, what it costs, what it's for, and what happens next</strong> &mdash; and then a written plan that gets revisited as things change.</p>
+        <p>I handle onboarding end to end: risk profiling, goal mapping, portfolio construction, and the periodic reviews that keep a portfolio matched to the plan rather than to last year's returns.</p>
+        <p>The aim is to make planning simple enough to trust and clear enough to act on, with every decision tied to what actually matters in a client's life.</p>
         <p>Alongside the CFP certification I hold an MBA in Financial Management from NMIMS, the QPFP designation from Network FP, and NISM Investment Adviser certifications at Levels 1 and 2.</p>
       </div>
     </div>
-  </section>
+  </section></div>
 
-  <section class="section wrap anim" id="practice">
+  <div class="band band--peach"><section class="section wrap anim" id="practice">
     <div class="horizon"><span class="mono horizon__label">Practice</span><span class="horizon__line"></span></div>
-    <h2 style="margin-bottom:2rem">The work, in six parts.</h2>
+    <h2 style="margin-bottom:2rem">Areas I work across.</h2>
     <div class="practice">
       <div>
         <h3>Comprehensive planning</h3>
@@ -171,39 +190,39 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
         <p>Every rupee assigned a job and a date. Goals set the time horizon; the time horizon sets the risk.</p>
       </div>
       <div>
-        <h3>Asset allocation &amp; fund selection</h3>
+        <h3>Asset allocation</h3>
         <p>Funds chosen against a client's goals and their tolerance for a bad year — not against last year's returns.</p>
       </div>
       <div>
-        <h3>Portfolio review &amp; rebalancing</h3>
+        <h3>Portfolio reviews</h3>
         <p>Periodic reviews that check the portfolio still matches the plan, and correct the drift when it doesn't.</p>
       </div>
       <div>
         <h3>Retirement planning</h3>
-        <p>A number to aim for, a path to it, and a withdrawal strategy for when the salary stops.</p>
+        <p>Working out the number to aim for, the path toward it, and how income is drawn once the salary stops.</p>
       </div>
       <div>
         <h3>Insurance &amp; risk management</h3>
         <p>What's actually covered, what's paid for twice, and what would happen to a family in the worst case.</p>
       </div>
     </div>
-  </section>
+  </section></div>
 
-  <section class="section wrap anim" id="writing">
+  <div class="band band--mint"><section class="section wrap anim" id="writing">
     <div class="horizon"><span class="mono horizon__label">Writing</span><span class="horizon__line"></span></div>
     <div class="cols">
       <div><h2>Notes on planning.</h2></div>
       <div class="prose">
         <p>I publish a carousel most weeks breaking down one piece of personal finance &mdash; the kind of thing that gets explained badly, or not at all, to the people it affects most.</p>
-        <p>It's the clearest picture of how I think about money, and the fastest way to tell whether we'd work well together.</p>
+        <p>It's general education rather than advice, and the clearest picture of how I think about money.</p>
         <div class="links" style="margin-top:1.5rem">
           <a href="https://www.linkedin.com/in/anna-catherine-m-2305/recent-activity/all/">Read the latest on LinkedIn &rarr;</a>
         </div>
       </div>
     </div>
-  </section>
+  </section></div>
 
-  <section class="section wrap anim" id="record">
+  <div class="band band--butter"><section class="section wrap anim" id="record">
     <div class="horizon"><span class="mono horizon__label">Record</span><span class="horizon__line"></span></div>
 
     <h2 style="margin-bottom:2rem">Experience</h2>
@@ -298,14 +317,14 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
         </div>
       </div>
     </div>
-  </section>
+  </section></div>
 
-  <section class="section wrap anim" id="contact">
+  <div class="band band--sky"><section class="section wrap anim" id="contact">
     <div class="horizon"><span class="mono horizon__label">Contact</span><span class="horizon__line"></span></div>
     <div class="cols">
       <div><h2>Let's talk.</h2></div>
       <div class="prose">
-        <p>Open to conversations about financial planning, wealth advisory and fee-only or RIA opportunities.</p>
+        <p>Open to professional conversations about financial planning, and to roles with planning-led advisory firms.</p>
         <a class="contact-email" href="mailto:mannacatherinem@gmail.com">mannacatherinem@gmail.com</a>
         <div class="links">
           <a href="https://www.linkedin.com/in/anna-catherine-m-2305">LinkedIn</a>
@@ -313,12 +332,13 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem}
         </div>
       </div>
     </div>
-  </section>
+  </section></div>
 
 </main>
 
-<footer class="wrap mono">
-  <span>Anna Catherine M · CFP<sup>&reg;</sup> · Updated July 2026</span>
+<footer class="wrap">
+  <p class="mono" style="margin:0 0 0.9rem">Anna Catherine M · CFP<sup>&reg;</sup> · Updated July 2026</p>
+  <p class="disclaimer">This site is a personal professional profile. Nothing on it is investment advice, research, or an offer or solicitation to buy or sell any security or product. Anna Catherine M is not a SEBI-registered Investment Adviser. Views expressed are personal and do not represent those of any employer. Investments are subject to market risks; readers should consult a suitably registered professional before acting on any information here.</p>
 </footer>
 
 <script>
