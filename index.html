@@ -34,7 +34,7 @@
   --rule:rgba(30,36,48,0.14);
   --accent:#574A8F;
   --measure:34rem;
-  --gutter:clamp(1.25rem,5vw,4.5rem);
+  --gutter:clamp(2.75rem,8vw,5rem);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -52,12 +52,12 @@ a{color:inherit}
 .wrap{max-width:78rem;margin:0 auto;padding-inline:var(--gutter)}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft)}
 
-.topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,253,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(234,223,233,0.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.5rem}
 .topbar__name{font-family:Fraunces,serif;font-size:1.18rem;letter-spacing:-0.01em;text-decoration:none}
-.topbar nav{display:flex;gap:1.5rem}
-.topbar nav a{text-decoration:none}
-.topbar nav a:hover{color:var(--accent)}
+.topbar nav{display:flex;gap:0.4rem}
+.topbar nav a{text-decoration:none;padding:0.3rem 0.75rem;border-radius:999px;background:rgba(255,255,255,0.45);transition:background .18s,color .18s}
+.topbar nav a:hover{color:var(--accent);background:rgba(255,255,255,0.9)}
 @media (max-width:44rem){.topbar nav{display:none}}
 
 .horizon{display:flex;align-items:baseline;gap:1rem;margin:0 0 2.5rem}
@@ -74,6 +74,7 @@ a{color:inherit}
 .hero__lede{max-width:var(--measure);font-size:clamp(1.1rem,1rem + 0.5vw,1.35rem);line-height:1.5;margin-top:2rem;color:var(--ink-soft)}
 .hero__horizon{margin-top:3.5rem;margin-bottom:1rem}
 .hero__years{display:flex;justify-content:space-between}
+@media (max-width:26rem){.hero__years{font-size:0.64rem;letter-spacing:0.08em}.horizon{gap:0.7rem}}
 
 .actions{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:2.5rem}
 .btn{display:inline-block;padding:0.8rem 1.5rem;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--ink);border-radius:2px;transition:background .18s,color .18s,border-color .18s}
@@ -81,13 +82,35 @@ a{color:inherit}
 .btn--solid:hover{background:var(--accent);border-color:var(--accent)}
 .btn--ghost:hover{background:#fff;border-color:var(--accent);color:var(--accent)}
 
-.band{background:var(--bg,var(--paper))}
-.band--lilac {--bg:#F1EEFB; --accent:#574A8F}
-.band--aqua  {--bg:#E7F3F5; --accent:#24646C}
-.band--peach {--bg:#FDF0EA; --accent:#96502F}
-.band--mint  {--bg:#ECF5E9; --accent:#3B6440}
-.band--butter{--bg:#FBF3E4; --accent:#7D6425}
-.band--sky   {--bg:#E9F0FA; --accent:#2F4F85}
+.band{background-color:var(--bg,var(--paper));background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  position:relative;overflow:hidden;padding-bottom:clamp(26px,5vw,58px)}
+.band::after{content:"";position:absolute;left:0;right:0;bottom:-1px;
+  height:clamp(28px,5.2vw,62px);background:var(--next,var(--paper-2));
+  clip-path:polygon(0% 44%,4% 30%,9% 47%,14% 28%,20% 45%,26% 26%,32% 48%,38% 31%,44% 46%,50% 25%,56% 44%,62% 29%,68% 47%,74% 30%,80% 48%,86% 27%,92% 45%,96% 33%,100% 44%,100% 100%,0% 100%);pointer-events:none;z-index:2}
+.band--peach    {--next:#F2F0F8}
+.band--peach{--bg:#EFE7F3; --accent:#5E3D77;background-image:radial-gradient(62% 80% at 14% 18%,#F4CBE4 0%,rgba(244,203,228,0) 62%),radial-gradient(58% 74% at 82% 12%,#C6D7F6 0%,rgba(198,215,246,0) 64%),radial-gradient(72% 72% at 66% 88%,#DCC4F0 0%,rgba(220,196,240,0) 62%),radial-gradient(54% 62% at 26% 92%,#C4EEE2 0%,rgba(196,238,226,0) 62%),radial-gradient(58% 60% at 96% 58%,#F9DCC6 0%,rgba(249,220,198,0) 62%),radial-gradient(46% 54% at 48% 42%,#FFFFFF 0%,rgba(255,255,255,0) 66%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");background-size:cover,cover,cover,cover,cover,cover,160px 160px}
+.band--powder   {--next:#EFE2A5}
+.band--lemon    {--next:#CBD5B8}
+.band--pistachio{--next:#EBBDBD}
+.band--blush    {--next:#EFE7F3}
+.band--lilac    {--next:#B3C6DD}
+.band > section{position:relative;z-index:1}
+.band::before{content:"";position:absolute;width:clamp(17rem,42vw,34rem);aspect-ratio:1;
+  border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 68%);
+  opacity:0.13;pointer-events:none}
+.band--peach::before   {top:-14%;right:-12%}
+.band--powder::before   {bottom:-20%;left:-14%}
+.band--lemon::before {top:-24%;right:22%}
+.band--pistachio::before    {bottom:-16%;right:-10%}
+.band--blush::before{top:-12%;left:-16%}
+.band--lilac::before   {bottom:-22%;right:-14%}
+.band--peach    {--bg:#F3C9A6; --accent:#8A4620}
+.band--powder   {--bg:#B3C6DD; --accent:#1F4470}
+.band--lemon    {--bg:#EFE2A5; --accent:#665510}
+.band--pistachio{--bg:#CBD5B8; --accent:#3B5227}
+.band--blush    {--bg:#EBBDBD; --accent:#8B3340}
+.band--lilac    {--bg:#D9C4D3; --accent:#6A3A66}
+.band--powder{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170'%3E%3Ccircle cx='30.0' cy='25.7' r='5.4' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='37.9' cy='31.4' r='5.4' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='34.9' cy='40.7' r='5.4' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='25.1' cy='40.7' r='5.4' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='22.1' cy='31.4' r='5.4' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='30' cy='34' r='3.6' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M38 44q6 -7 15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='45' cy='35' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-28 45 35)'/%3E%3Cellipse cx='52' cy='40' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(18 52 40)'/%3E%3Ccircle cx='114.6' cy='19.6' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='118.9' cy='26.5' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='113.7' cy='32.7' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='106.1' cy='29.7' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='106.7' cy='21.6' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='112' cy='26' r='3.0' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M104 34q-6 -7 -15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='97' cy='25' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(28 97 25)'/%3E%3Cellipse cx='90' cy='30' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-18 90 30)'/%3E%3Ccircle cx='75.8' cy='83.5' r='5.7' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='82.7' cy='91.1' r='5.7' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='77.6' cy='100.0' r='5.7' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='67.5' cy='97.8' r='5.7' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='66.4' cy='87.6' r='5.7' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='74' cy='92' r='3.8' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M83 102q6 -7 15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='90' cy='93' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-28 90 93)'/%3E%3Cellipse cx='97' cy='98' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(18 97 98)'/%3E%3Ccircle cx='152.1' cy='99.1' r='4.2' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='154.0' cy='106.4' r='4.2' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='147.6' cy='110.4' r='4.2' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='141.8' cy='105.6' r='4.2' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='144.6' cy='98.5' r='4.2' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='148' cy='104' r='2.8' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M140 112q-6 -7 -15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='133' cy='103' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(28 133 103)'/%3E%3Cellipse cx='126' cy='108' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-18 126 108)'/%3E%3Ccircle cx='27.7' cy='126.1' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='30.7' cy='133.7' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='24.5' cy='138.9' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='17.6' cy='134.6' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='19.6' cy='126.7' r='4.5' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='24' cy='132' r='3.0' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M33 141q6 -7 15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='40' cy='132' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-28 40 132)'/%3E%3Cellipse cx='47' cy='137' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(18 47 137)'/%3E%3Ccircle cx='127.1' cy='142.3' r='5.1' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='133.7' cy='148.6' r='5.1' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='129.7' cy='156.9' r='5.1' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='120.6' cy='155.6' r='5.1' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='119.0' cy='146.6' r='5.1' fill='%23A9BBDF' fill-opacity='0.55'/%3E%3Ccircle cx='126' cy='150' r='3.4' fill='%23E4DFBE' fill-opacity='0.70'/%3E%3Cpath d='M118 158q-6 -7 -15 -9' stroke='%238FA87C' stroke-opacity='0.5' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='111' cy='149' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(28 111 149)'/%3E%3Cellipse cx='104' cy='154' rx='4.6' ry='2.6' fill='%238FA87C' fill-opacity='0.5' transform='rotate(-18 104 154)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");background-size:170px 170px,160px 160px;background-repeat:repeat,repeat}
 .section{padding:clamp(3.5rem,9vh,6rem) 0}
 .cols{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 @media (max-width:52rem){.cols{grid-template-columns:1fr;gap:2rem}}
@@ -95,11 +118,27 @@ a{color:inherit}
 .prose{max-width:var(--measure)}
 .prose p{color:var(--ink-soft)}
 .prose strong{color:var(--ink);font-weight:600}
-.portrait{width:100%;max-width:22rem;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(0.92) contrast(1.02);border:2px solid #fff;box-shadow:0 1px 0 var(--rule)}
+.portrait{width:100%;max-width:21rem;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(0.92) contrast(1.02);border:3px solid #FFFDF8;border-radius:11rem 11rem 8px 8px;box-shadow:0 0 0 1px var(--rule), 15px 15px 0 -3px var(--accent);margin-bottom:1rem}
 
-.practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
-.practice > div{background:#FFFFFF;padding:1.75rem 1.5rem}
+.practice{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0.85rem}
+.practice > div{background:#FFFDF8;padding:1.75rem 1.5rem;border-radius:16px;border:1px solid var(--rule)}
 .practice h3{font-size:1.25rem;margin-bottom:0.6rem;color:var(--accent)}
+.practice > div{transition:transform .22s ease, box-shadow .22s ease}
+.practice > div:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(30,36,48,0.08);z-index:2}
+.flourish{position:absolute;width:clamp(64px,9vw,120px);opacity:0.18;color:var(--accent);
+  stroke:currentColor;fill:none;stroke-width:1.1;stroke-linecap:round;pointer-events:none;z-index:0}
+.flourish--tr{top:1.5rem;right:0.5rem}
+.flourish--bl{bottom:1.5rem;left:0.5rem;transform:scaleX(-1)}
+.flourish--br{bottom:2.5rem;right:1rem;width:clamp(76px,11vw,150px)}
+.scene{margin:3.25rem 0 0;padding:0;border-radius:14rem 14rem 10px 10px;overflow:hidden;
+  border:3px solid #FFFDF8;box-shadow:0 0 0 1px var(--rule);line-height:0}
+.scene svg{width:100%;height:auto;display:block}
+.h-ico{width:1.45rem;height:1.45rem;display:inline-block;vertical-align:-0.22rem;
+  margin-right:0.55rem;color:var(--accent);stroke:currentColor;fill:none;
+  stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:52rem){.flourish{opacity:0.13}}
+.ico{width:26px;height:26px;display:block;margin-bottom:0.95rem;color:var(--accent);
+  stroke:currentColor;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .practice p{font-size:0.94rem;color:var(--ink-soft);margin:0}
 
 .ledger{border-top:1px solid var(--rule)}
@@ -117,8 +156,7 @@ a{color:inherit}
 .links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
 .links a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
 .links a:hover{color:var(--accent)}
-footer{padding:2rem 0 3rem;background:var(--paper-2)}
-.disclaimer{max-width:60ch;font-size:0.78rem;line-height:1.55;color:var(--ink-soft);margin:0}
+footer{padding:2.5rem 0 3rem;background-color:var(--paper-2);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E")}
 
 .section,.hero__lede,.actions{transition:opacity .6s ease,transform .6s ease}
 .js .anim{opacity:0;transform:translateY(14px)}
@@ -148,7 +186,7 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
     <span class="mono hero__credential">Certified Financial Planner<sup>&reg;</sup></span>
     <h1>Anna<br>Catherine&nbsp;M</h1>
     <p class="hero__tagline">Money decisions that hold up <em>over decades.</em></p>
-    <p class="hero__lede">I'm a CERTIFIED FINANCIAL PLANNER working in comprehensive planning — investments, insurance, retirement, tax and cash flow, held together in one document a family can actually follow.</p>
+    <p class="hero__lede">I'm a CERTIFIED FINANCIAL PLANNER<sup>&reg;</sup> working in comprehensive planning — investments, insurance, retirement, tax and cash flow, held together in one document a family can actually follow.</p>
 
     <div class="hero__horizon horizon reveal">
       <span class="mono horizon__label">Planning horizon</span>
@@ -156,19 +194,48 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
     </div>
     <div class="hero__years mono"><span>Today</span><span>10 yrs</span><span>25 yrs</span><span>Retirement</span></div>
 
+    
     <div class="actions">
       <a class="btn btn--solid" href="#contact">Get in touch</a>
       <a class="btn btn--ghost" href="https://annacatherinem.github.io/website/Anna-Catherine-M-CV.pdf">Download CV (PDF)</a>
     </div>
+    <figure class="scene">
+      <svg viewBox="0 0 1200 300" role="img" aria-label="Illustration of a distant horizon at dawn">
+        <rect width="1200" height="300" fill="#DCE7F2"/>
+        <circle cx="985" cy="78" r="40" fill="#F6E7A6"/>
+        <g fill="#FFFFFF" opacity="0.85">
+          <ellipse cx="138" cy="80" rx="30" ry="26"/><ellipse cx="172" cy="62" rx="38" ry="33"/>
+          <ellipse cx="212" cy="76" rx="32" ry="28"/><ellipse cx="246" cy="84" rx="26" ry="22"/>
+          <ellipse cx="393" cy="58" rx="22" ry="19"/><ellipse cx="417" cy="45" rx="27" ry="24"/>
+          <ellipse cx="447" cy="55" rx="23" ry="20"/>
+          <ellipse cx="716" cy="95" rx="26" ry="22"/><ellipse cx="745" cy="80" rx="32" ry="28"/>
+          <ellipse cx="779" cy="91" rx="27" ry="24"/><ellipse cx="808" cy="98" rx="22" ry="19"/>
+        </g>
+        <ellipse cx="250" cy="258" rx="430" ry="112" fill="#C7D2DE"/>
+        <ellipse cx="820" cy="268" rx="470" ry="120" fill="#CDD7E2"/>
+        <ellipse cx="500" cy="300" rx="530" ry="120" fill="#CBD5B8"/>
+        <ellipse cx="1060" cy="308" rx="430" ry="112" fill="#C4D0B0"/>
+        <g fill="#7E976E">
+          <polygon points="120,196 109,250 131,250"/><rect x="118" y="250" width="4" height="8"/>
+          <polygon points="148,210 137,250 159,250"/><rect x="146" y="250" width="4" height="8"/>
+          <polygon points="660,204 649,250 671,250"/><rect x="658" y="250" width="4" height="8"/>
+          <polygon points="690,188 679,250 701,250"/><rect x="688" y="250" width="4" height="8"/>
+          <polygon points="716,208 705,250 727,250"/><rect x="714" y="250" width="4" height="8"/>
+        </g>
+        <ellipse cx="300" cy="344" rx="700" ry="132" fill="#B4C79C"/>
+        <rect y="262" width="1200" height="38" fill="#B4C79C"/>
+      </svg>
+    </figure>
   </section></div>
 
-  <div class="band band--aqua"><section class="section wrap anim" id="about">
+  <div class="band band--powder"><section class="section wrap anim" id="about">
+    <svg class="flourish flourish--tr" viewBox="0 0 120 210" aria-hidden="true"><path d="M60 205C60 160 57 96 63 14"/><path d="M61 168C41 160 31 145 29 126c20 3 30 17 33 37"/><path d="M61 146c21-8 31-23 33-42-20 3-30 17-33 37"/><path d="M61 118C42 110 33 96 31 78c19 3 28 16 31 34"/><path d="M62 94c20-8 30-22 32-41-19 3-29 16-32 34"/><path d="M62 66C45 58 37 45 35 28c18 3 26 15 29 31"/></svg>
     <div class="horizon"><span class="mono horizon__label">About</span><span class="horizon__line"></span></div>
     <div class="cols">
       <img class="portrait" src="https://annacatherinem.github.io/website/anna-catherine.jpg" alt="Anna Catherine M" width="800" height="1000">
       <div class="prose">
         <h2>Plans, not products.</h2>
-        <p>I'm a CERTIFIED FINANCIAL PLANNER with five years in goal-based financial planning &mdash; retirement, tax efficiency, contingency planning and risk management.</p>
+        <p>I'm a CERTIFIED FINANCIAL PLANNER<sup>&reg;</sup> with five years in goal-based financial planning &mdash; retirement, tax efficiency, contingency planning and risk management.</p>
         <p>Most people come to me holding a few policies, a handful of funds and no clear view of whether any of it adds up to the life they're working toward. My job is to give them that view &mdash; <strong>what you own, what it costs, what it's for, and what happens next</strong> &mdash; and then a written plan that gets revisited as things change.</p>
         <p>I handle onboarding end to end: risk profiling, goal mapping, portfolio construction, and the periodic reviews that keep a portfolio matched to the plan rather than to last year's returns.</p>
         <p>The aim is to make planning simple enough to trust and clear enough to act on, with every decision tied to what actually matters in a client's life.</p>
@@ -177,55 +244,56 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
     </div>
   </section></div>
 
-  <div class="band band--peach"><section class="section wrap anim" id="practice">
+  <div class="band band--lemon"><section class="section wrap anim" id="practice">
     <div class="horizon"><span class="mono horizon__label">Practice</span><span class="horizon__line"></span></div>
     <h2 style="margin-bottom:2rem">Areas I work across.</h2>
     <div class="practice">
       <div>
-        <h3>Comprehensive planning</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h5"/></svg><h3>Comprehensive planning</h3>
         <p>One written plan covering income, spending, goals and the gap between them, with the trade-offs made explicit rather than buried.</p>
       </div>
       <div>
-        <h3>Goal-based investing</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg><h3>Goal-based investing</h3>
         <p>Every rupee assigned a job and a date. Goals set the time horizon; the time horizon sets the risk.</p>
       </div>
       <div>
-        <h3>Asset allocation</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M14 3.4A9 9 0 0 1 20.6 10H14z"/></svg><h3>Asset allocation</h3>
         <p>Funds chosen against a client's goals and their tolerance for a bad year — not against last year's returns.</p>
       </div>
       <div>
-        <h3>Portfolio reviews</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v4h-4"/></svg><h3>Portfolio reviews</h3>
         <p>Periodic reviews that check the portfolio still matches the plan, and correct the drift when it doesn't.</p>
       </div>
       <div>
-        <h3>Retirement planning</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18"/><path d="M7 18a5 5 0 0 1 10 0"/><path d="M12 5v3M5.5 8.5l2 2M18.5 8.5l-2 2"/></svg><h3>Retirement planning</h3>
         <p>Working out the number to aim for, the path toward it, and how income is drawn once the salary stops.</p>
       </div>
       <div>
-        <h3>Insurance &amp; risk management</h3>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg><h3>Insurance &amp; risk management</h3>
         <p>What's actually covered, what's paid for twice, and what would happen to a family in the worst case.</p>
       </div>
     </div>
   </section></div>
 
-  <div class="band band--mint"><section class="section wrap anim" id="writing">
+  <div class="band band--pistachio"><section class="section wrap anim" id="writing">
     <div class="horizon"><span class="mono horizon__label">Writing</span><span class="horizon__line"></span></div>
     <div class="cols">
-      <div><h2>Notes on planning.</h2></div>
+      <div><h2><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3h8l5 5v13h-13z"/><path d="M13.5 3v5h5"/><path d="M9 13h6M9 16.5h4"/></svg>Notes on planning.</h2></div>
       <div class="prose">
         <p>I publish a carousel most weeks breaking down one piece of personal finance &mdash; the kind of thing that gets explained badly, or not at all, to the people it affects most.</p>
         <p>It's general education rather than advice, and the clearest picture of how I think about money.</p>
         <div class="links" style="margin-top:1.5rem">
-          <a href="https://www.linkedin.com/in/anna-catherine-m-2305/recent-activity/all/">Read the latest on LinkedIn &rarr;</a>
+          <a href="https://www.linkedin.com/in/anna-catherine-m-2305/">Find my latest posts on LinkedIn &rarr;</a>
         </div>
       </div>
     </div>
   </section></div>
 
-  <div class="band band--butter"><section class="section wrap anim" id="record">
+  <div class="band band--blush"><section class="section wrap anim" id="record">
+    <svg class="flourish flourish--br" viewBox="0 0 130 150" aria-hidden="true"><ellipse cx="65" cy="34" rx="44" ry="16"/><path d="M21 34v20c0 8.8 19.7 16 44 16s44-7.2 44-16V34"/><path d="M21 62v20c0 8.8 19.7 16 44 16s44-7.2 44-16V62"/><path d="M21 90v20c0 8.8 19.7 16 44 16s44-7.2 44-16V90"/></svg>
     <div class="horizon"><span class="mono horizon__label">Record</span><span class="horizon__line"></span></div>
 
-    <h2 style="margin-bottom:2rem">Experience</h2>
+    <h2 style="margin-bottom:2rem"><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>Experience</h2>
     <div class="ledger">
       <div class="entry">
         <span class="mono entry__year">2022 — Now</span>
@@ -257,7 +325,7 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
       </div>
     </div>
 
-    <h2 style="margin:3.5rem 0 2rem">Certifications</h2>
+    <h2 style="margin:3.5rem 0 2rem"><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="M8.8 13.6L7.5 21l4.5-2.5L16.5 21l-1.3-7.4"/></svg>Certifications</h2>
     <div class="ledger">
       <div class="entry">
         <span class="mono entry__year">2023</span>
@@ -298,7 +366,7 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
       </div>
     </div>
 
-    <h2 style="margin:3.5rem 0 2rem">Education</h2>
+    <h2 style="margin:3.5rem 0 2rem"><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.5l10-4 10 4-10 4z"/><path d="M6.5 10.7V16c0 1.6 2.9 3 5.5 3s5.5-1.4 5.5-3v-5.3"/></svg>Education</h2>
     <div class="ledger">
       <div class="entry">
         <span class="mono entry__year">2022 — 2024</span>
@@ -319,10 +387,11 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
     </div>
   </section></div>
 
-  <div class="band band--sky"><section class="section wrap anim" id="contact">
+  <div class="band band--peach"><section class="section wrap anim" id="contact">
+    <svg class="flourish flourish--bl" viewBox="0 0 120 210" aria-hidden="true"><path d="M60 205C60 160 57 96 63 14"/><path d="M61 168C41 160 31 145 29 126c20 3 30 17 33 37"/><path d="M61 146c21-8 31-23 33-42-20 3-30 17-33 37"/><path d="M61 118C42 110 33 96 31 78c19 3 28 16 31 34"/><path d="M62 94c20-8 30-22 32-41-19 3-29 16-32 34"/><path d="M62 66C45 58 37 45 35 28c18 3 26 15 29 31"/></svg>
     <div class="horizon"><span class="mono horizon__label">Contact</span><span class="horizon__line"></span></div>
     <div class="cols">
-      <div><h2>Let's talk.</h2></div>
+      <div><h2><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.4 7l8.6 5.8L20.6 7"/></svg>Let's talk.</h2></div>
       <div class="prose">
         <p>Open to professional conversations about financial planning, and to roles with planning-led advisory firms.</p>
         <a class="contact-email" href="mailto:mannacatherinem@gmail.com">mannacatherinem@gmail.com</a>
@@ -336,9 +405,8 @@ footer{padding:2rem 0 3rem;background:var(--paper-2)}
 
 </main>
 
-<footer class="wrap">
-  <p class="mono" style="margin:0 0 0.9rem">Anna Catherine M · CFP<sup>&reg;</sup> · Updated July 2026</p>
-  <p class="disclaimer">This site is a personal professional profile. Nothing on it is investment advice, research, or an offer or solicitation to buy or sell any security or product. Anna Catherine M is not a SEBI-registered Investment Adviser. Views expressed are personal and do not represent those of any employer. Investments are subject to market risks; readers should consult a suitably registered professional before acting on any information here.</p>
+<footer class="wrap mono">
+  <span>Anna Catherine M · CFP<sup>&reg;</sup> · Updated July 2026</span>
 </footer>
 
 <script>
