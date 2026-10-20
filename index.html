@@ -451,17 +451,17 @@ footer :focus-visible{outline-color:#B8CFC8}
 
       <div class="letter" id="newsletter">
         <div class="letter__head">
-          <span class="eyebrow">The Planning Letter</span>
+          <span class="eyebrow">The Financial Planning Letter</span>
         </div>
         <h3>One practical planning note, once a month.</h3>
         <p>A short, plain-language note on one piece of personal finance, straight to your inbox. General education, never advice. Unsubscribe anytime.</p>
 
-        <!-- MailerLite: replace PASTE_MAILERLITE_ACTION_URL with the form "action" URL from your MailerLite embedded form (HTML code). Until then, the form stays hidden and a "launching soon" note shows instead. -->
-        <form class="letter__form" data-ml-form action="PASTE_MAILERLITE_ACTION_URL" method="post" target="ml-sink">
+        <!-- MailerLite embedded form "Planning Letter" (group Planning Letter, double opt-in). WhatsApp maps to MailerLite's built-in phone field. -->
+        <form class="letter__form" data-ml-form action="https://assets.mailerlite.com/jsonp/2705544/forms/201865051222574219/subscribe" method="post" target="ml-sink">
           <label>Name <input type="text" name="fields[name]" autocomplete="name" required></label>
           <label>Email <input type="email" name="fields[email]" autocomplete="email" required></label>
-          <label>WhatsApp number (optional)<input type="tel" name="fields[whatsapp]" autocomplete="tel" inputmode="tel"></label>
-          <label class="consent"><input type="checkbox" required> <span>I agree to receive the monthly Planning Letter by email from Anna Catherine M. If I add a WhatsApp number, I agree to occasional updates there too.</span></label>
+          <label>WhatsApp number (optional)<input type="tel" name="fields[phone]" autocomplete="tel" inputmode="tel"></label>
+          <label class="consent"><input type="checkbox" required> <span>I agree to receive the monthly Financial Planning Letter by email from Anna Catherine M. If I add a WhatsApp number, I agree to occasional updates there too.</span></label>
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
           <button class="btn btn--primary" type="submit">Subscribe</button>
